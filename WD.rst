@@ -7,7 +7,7 @@ RiveScript::WD
 NAME
 ****
 
-RiveScript::WD - RiveScript 2.00 Working Draft (2014/11/30)
+RiveScript::WD - RiveScript 2.00 Working Draft (2015/02/11)
 
 DESCRIPTION
 ***********
@@ -120,13 +120,32 @@ version
 
 It's highly recommended practice that new RiveScript documents explicitly
 define the version of RiveScript that they are following. RiveScript 2.00
-has some compatibility issues with the old 1.x line (see "REVERSE COMPATIBILITY").
+has some compatibility issues with the old 1.x line (see `REVERSE COMPATIBILITY`_).
 Newer RiveScript versions should encourage that RiveScript documents define their
 own version numbers.
 
 .. code-block::
 
    ! version = 2.00
+
+local
+-----
+
+This option should override a *local*, file scoped parser option that should
+apply to the rest of the current file, but not to any subsequently parsed
+files. It's equivalent to a ``use warnings`` type of feature in other
+programming languages.
+
+Examples:
+
+.. code-block::
+
+   // Make it so that lines joined with the ^Continue command will be
+   // concatenated with a space character in between (default is none).
+   ! local concat = space
+
+See `STANDARD LOCAL PARSER OPTIONS`_ below for a listing of options that should
+be supported.
 
 global
 ------
@@ -151,7 +170,7 @@ This should define a "bot variable" for the bot. This should only be used in an
 initialization sense; that is, as the interpreter loads the document, it should
 define the bot variable as it reads in this line. If you'd want to redefine or
 alter the value of a bot variable, you should do so using a tag inside of a
-RiveScript document (see "TAGS").
+RiveScript document (see `TAGS`_).
 
 Examples:
 
@@ -167,7 +186,7 @@ array
 -----
 
 This will create an array of strings, which can then be used later in triggers
-(see "+ TRIGGER"). If the array contains single words, separating the words
+(see `+ TRIGGER`_). If the array contains single words, separating the words
 with a space character is fine. If the array contains items with multiple words
 in them, separate the entries with a pipe symbol (``"|"``).
 
@@ -241,7 +260,7 @@ person
 ------
 
 The ``person`` variables work a lot like ``sub``'s do, but these are run against
-the bot's response, specifically within ``<person>`` tags (See "TAGS").
+the bot's response, specifically within ``<person>`` tags (See `TAGS`_).
 
 Person substitutions should swap first- and second-person pronouns. This is so
 that ex. if the client asks the bot a direct question using "you" when addressing
@@ -397,7 +416,7 @@ When a topic inherits another topic, it means that the entire collection
 of triggers of the source topic *and* any included topics, will have a
 higher matching priority than the inherited topics.
 
-See "Sorting +Triggers" to see how triggers are sorted internally. The
+See `Sorting +Triggers`_ to see how triggers are sorted internally. The
 following example shows how includes and inheritence works:
 
 .. code-block::
@@ -591,7 +610,7 @@ Objects are bits of program code that the interpreter should try to process.
 The programming language that the interpreter was written in will determine
 whether or not it will attempt to process the object.
 
-See "OBJECT MACROS" for more information on objects.
+See `OBJECT MACROS`_ for more information on objects.
 
 The ``object`` label should have two arguments: a lowercase single-word name for
 the object, and the programming language that the object should be interpreted
@@ -901,7 +920,7 @@ contrast to using topics, where I'd be stuck inside of the topic until the bot
 resets the topic to ``random``.
 
 Similarly to the wildcards in ``+ Trigger``, the wildcards matched in the
-``% Previous`` command are put into ``<botstar>``. See "TAGS" for
+``% Previous`` command are put into ``<botstar>``. See `TAGS`_ for
 more information.
 
 ^ CONTINUE
@@ -919,9 +938,32 @@ to the new line. It can be used to extend any other command. Example:
    ^ the Spider, the bounder,\n
    ^ Is not in the picture today.
 
-Note that when the ``^`` command continues the previous command, no spaces or
-line breaks are implied at the joining of the two lines. The ``\s`` and ``\n``
-tags must be explicitly defined where needed.
+Note that when the ``^`` command continues the previous command, by default
+**no spaces or line breaks** are implied at the joining of the two lines.
+The ``\s`` and ``\n`` tags can be explicitly defined where needed.
+
+At the chatbot writer's discretion, they may override the default concatenation
+character used with this command on a per-file basis, by defining at the top
+of the file a command like so:
+
+.. code-block::
+
+   ! local concat = newline
+
+The ``! local concat`` option will change the concatenation character for the
+subsequent lines of RiveScript code that are parsed *after* this option is
+defined. The RiveScript code may specify this option multiple times in the same
+file; its most recent setting is used for the proceeding code that is parsed
+later in the file.
+
+The ``! local concat`` option *only* affects the current file being parsed
+(streaming in RiveScript code as text should count as a "file" for one
+contiguous block of text). All files will default to the concat mode being
+set to "none" which means no character is inserted automatically when the two
+lines are joined.
+
+Valid options for ``! local concat`` are ``none``, ``space`` and ``newline``.
+See `STANDARD LOCAL PARSER OPTIONS`_ for more information on parser options.
 
 @ REDIRECT
 ==========
@@ -1353,6 +1395,33 @@ RiveScript code. This details some of the priorities for processing tags and
 sorting internal data structures. This part of the document should be
 programming-language-independent.
 
+STANDARD LOCAL PARSER OPTIONS
+=============================
+
+Parser options are file-scoped settings that instruct the parser on how to
+interpret the code within that file, in ways that support changes that would
+have the potential to break backward compatibility otherwise.
+
+Parser options are specified using the ``! local`` command and are only in
+effect for the current file being parsed. The option applies to all subsequent
+lines of the file after the declaration.
+
+The interpreter must support the following standard parser options:
+
+.. code-block::
+
+   concat = concatenation mode to use when joining lines of code with the
+            ^Continue command.
+
+Valid values for the ``concat`` option are as follows:
+
+* ``none`` -- the default. No character is inserted during a concatenation;
+  the writer must explicitly write a ``\s`` or ``\n`` tag.
+* ``space`` -- a space character is inserted during the concatenation
+* ``newline`` -- a newline character ``\n`` is inserted during the
+  concatenation
+* All other invalid options should be treated the same as ``none``
+
 STANDARD GLOBAL VARIABLES
 =========================
 
@@ -1656,6 +1725,10 @@ REVISIONS
 *********
 
 .. code-block::
+
+   Rev 13 - Feb 11, 2015
+   - Add information about the `! local concat` parser option that lets you
+     override the concatenation behavior with ^Continue commands.
 
    Rev 12 - Nov 30, 2014
    - Added implementation guidelines for dealing with variable-setting tags.
