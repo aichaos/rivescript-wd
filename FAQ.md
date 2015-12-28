@@ -18,10 +18,7 @@ the stable version that follows. Development versions are considered bleeding
 edge and will get new features arbitrarily with no change in version number
 until the next stable release.
 
-The JavaScript version uses [semantic versioning](http://semver.org/) (the
-"three number" notation) whereas the Perl, Python and Java versions use a
-[Perl-style](http://perldoc.perl.org/perlmodstyle.html#Version-numbering)
-versioning scheme (for example, `1.36`, because changing it now will cause
-issues with packaging tools in those languages and some versioning schemes
-[don't work well](http://www.dagolden.com/index.php/369/version-numbers-should-be-boring/)
-in some programming languages).
+Most of the implementations use [semantic versioning](http://semver.org/);
+previously some of them used the Perl style floating point versioning scheme
+(the Perl implementation used it until v0.42; Python until v1.06). The Java
+version still uses a Perl style version number, but this will change eventually.
