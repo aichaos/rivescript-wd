@@ -116,3 +116,17 @@ Support:
 - [ ] Python
 
 Last updated: 2016-02-11
+
+## Recursive Load Directory
+
+This makes the `loadDirectory()` function search recursively for RiveScript files.
+
+Support:
+
+- [ ] Go
+- [ ] Java
+- [x] JavaScript ([@07e4e93](https://github.com/aichaos/rivescript-js/commit/07e4e932b0a69111fd797ec2a81393fbf3448ae7))
+- [ ] Perl
+- [ ] Python
+
+Last updated: 2016-03-08
