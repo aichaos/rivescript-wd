@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="713.47614"
+   height="627.25366"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="RiveScript.svg"
+   inkscape:export-filename="/home/kirsle/Pictures/RiveScript.png"
+   inkscape:export-xdpi="299.96799"
+   inkscape:export-ydpi="299.96799">
+  <title
+     id="title3984">RiveScript Logo</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.56646032"
+     inkscape:cx="350.16365"
+     inkscape:cy="360.50861"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="696"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     borderlayer="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3798"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>RiveScript Logo</dc:title>
+        <dc:date>2011-10-23</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Noah Petherbridge</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>The RiveScript logo.</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ring"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(-17.470219,-188.17039)">
+    <path
+       transform="matrix(1.2413049,0,0,1.2413049,-90.094306,-175.76387)"
+       style="fill:#ff0000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:18;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+       d="m 541.44176,554.35699 c 0,89.8206 -72.81398,162.63457 -162.63457,162.63457 -89.82059,0 -162.63457,-72.81397 -162.63457,-162.63457 0,-89.82059 72.81398,-162.63456 162.63457,-162.63456 89.82059,0 162.63457,72.81397 162.63457,162.63456 z"
+       id="ring"
+       inkscape:label="ring"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Crescents"
+     style="display:inline"
+     transform="translate(-17.470219,-188.17039)">
+    <g
+       id="g3849" />
+    <g
+       id="crescents"
+       inkscape:label="crescents">
+      <path
+         inkscape:transform-center-y="203.4696"
+         inkscape:connector-curvature="0"
+         id="path3805-4"
+         d="m 198.97782,796.33388 c -0.0175,6.09076 0.2231,12.12587 0.79502,18.06337 C 209.08868,723.14859 286.34291,652.09467 380,652.36218 c 93.65708,0.26752 170.45712,71.76148 179.25154,163.06185 0.60583,-5.93413 0.92782,-11.96762 0.94522,-18.05839 0.28492,-99.74785 -80.34573,-180.84044 -180.09359,-181.12535 -99.74785,-0.28491 -180.84044,80.34573 -181.12535,180.09359 z"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <path
+         inkscape:transform-center-x="205.60152"
+         inkscape:transform-center-y="-143.361"
+         inkscape:connector-curvature="0"
+         id="path3805-4-8"
+         d="m 237.56022,207.2589 c -5.12284,-3.29456 -10.33777,-6.34167 -15.64887,-9.05704 71.8725,56.98637 90.14407,160.34508 39.48519,239.11944 -50.65889,78.77435 -152.25804,104.98965 -233.926321,63.23571 4.674051,3.70596 9.584671,7.22626 14.707575,10.52074 83.897246,53.95337 195.647266,29.67905 249.600636,-54.21821 53.95336,-83.89726 29.67905,-195.64728 -54.21821,-249.60064 z"
+         style="fill:#000000;fill-opacity:1;stroke:none;display:inline" />
+      <path
+         inkscape:transform-center-x="-205.41177"
+         inkscape:transform-center-y="-143.07812"
+         inkscape:connector-curvature="0"
+         id="path3805-4-8-6"
+         d="m 716.12796,512.46922 c 5.14978,-3.25229 10.11415,-6.69255 14.81842,-10.36008 -82.00778,41.08315 -183.41375,13.99619 -233.42526,-65.19075 -50.0115,-79.18694 -30.86822,-182.35265 41.46894,-238.748 -5.33317,2.67175 -10.59795,5.63634 -15.74768,8.88872 -84.33668,53.26387 -109.52615,164.81117 -56.26227,249.14785 53.26389,84.33666 164.81118,109.52615 249.14785,56.26226 z"
+         style="fill:#000000;fill-opacity:1;stroke:none;display:inline" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Middle"
+     style="display:inline"
+     transform="translate(-17.470219,-188.17039)">
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;display:inline"
+       d="m 456.89986,564.95003 c -3.00048,-0.97497 -12.90567,-3.33283 -22.01152,-5.23974 -40.66031,-8.51486 -81.93159,-7.68793 -122.7045,2.45858 -7.91502,1.96967 -14.54376,3.58125 -14.73049,3.58125 -0.1867,0 4.22712,-4.66019 9.80865,-10.35595 33.48091,-34.1663 57.54707,-76.0288 69.64712,-121.14971 3.07067,-11.45047 3.2868,-11.85564 4.07715,-7.64261 1.50227,8.00766 9.32449,31.35082 14.80633,44.18504 13.50317,31.61406 33.53868,61.11979 58.10359,85.56769 5.86226,5.83432 10.16375,10.55392 9.55892,10.488 -0.60487,-0.0659 -3.55474,-0.91758 -6.55525,-1.89255 z"
+       id="middle"
+       inkscape:connector-curvature="0"
+       inkscape:label="middle" />
+  </g>
+</svg>
