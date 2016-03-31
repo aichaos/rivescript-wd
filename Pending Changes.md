@@ -66,7 +66,7 @@ variables, respectively, similar to the `<set>` tag.
 Support:
 
 - [x] Go
-- [ ] Java
+- [x] Java ([@e09049e](https://github.com/aichaos/rivescript-java/pull/7/commits/e09049e1b24abf912aab46bb54fb302eff9ec9ff))
 - [x] JavaScript
 - [x] Perl
 - [x] Python
