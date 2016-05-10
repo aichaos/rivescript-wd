@@ -130,3 +130,17 @@ Support:
 - [ ] Python
 
 Last updated: 2016-03-08
+
+## Nested Arrays
+
+This makes arrays able to embed each other, like `!array colors = @primary @chromatic orange brown pink`. Arrays are only expanded at reply fetching time, so they can be defined in any order in any file.
+
+Support:
+
+- [ ] Go
+- [ ] Java
+- [ ] JavaScript
+- [ ] Perl
+- [x] Python ([#22](https://github.com/aichaos/rivescript-python/pull/22))
+
+Last updated: 2016-05-10
