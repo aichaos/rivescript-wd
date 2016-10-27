@@ -140,7 +140,7 @@ Support:
 - [ ] Go
 - [ ] Java
 - [ ] JavaScript
-- [ ] Perl
+- [x] Perl
 - [x] Python ([#22](https://github.com/aichaos/rivescript-python/pull/22))
 
-Last updated: 2016-05-10
+Last updated: 2016-10-27
