@@ -7,7 +7,7 @@ RiveScript::WD
 NAME
 ****
 
-RiveScript::WD - RiveScript 2.00 Working Draft (2015/02/11)
+RiveScript::WD - RiveScript 2.00 Working Draft (2021/08/12)
 
 DESCRIPTION
 ***********
