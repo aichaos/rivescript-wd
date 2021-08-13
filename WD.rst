@@ -1173,10 +1173,20 @@ repeating the bot's replies.
    - Don't repeat what I say.
 
    + <input1>
-   * <input1> eq <input2> => That's the second time you've repeated yourself.
-   * <input1> eq <input3> => If you repeat yourself again I'll stop talking to you.
    * <input1> eq <input4> => That's it. I'm done talking to you.{topic=blocked}
+   * <input1> eq <input3> => If you repeat yourself again I'll stop talking to you.
+   * <input1> eq <input2> => That's the second time you've repeated yourself.
    - Please don't repeat yourself.
+
+   > topic blocked
+      // NOTE: "<noreply>" is handled in your bot's code, to not
+      // show a reply to the user; it isn't a RiveScript tag.
+      + *
+      - <noreply>
+
+      + sorry
+      - {topic=random}Ok I'll forgive you.
+   < topic
 
 ``<input>`` and ``<reply>`` are aliases for ``<input1>`` and
 ``<reply1>``, respectively.
@@ -1186,6 +1196,17 @@ repeating the bot's replies.
 
 The ``<id>`` tag inserts the client's ID, as told to the RiveScript
 interpreter when the client's ID and message were passed in.
+
+<noreply>
+=========
+
+The ``<noreply>`` tag is treated by the RiveScript interpreter to be just
+ordinary, literal text and returned as-is in a reply. It is a protected tag
+which is guaranteed never to have any meaning to RiveScript.
+
+This tag is conventionally used to signal: "do not deliver a reply to the user."
+The calling program would check for the ``<noreply>`` substring to know to
+skip delivering a reply.
 
 <bot>
 =====
@@ -1613,6 +1634,7 @@ that a tag is allowed is as follows:
    <input>     #
    <reply>     #
    <id>        #
+   <noreply>   #
    \s          #
    \n          #
    \\          #
@@ -1725,6 +1747,11 @@ REVISIONS
 *********
 
 .. code-block::
+
+   Rev 14 - Aug 12, 2021
+   - Fixed an error in the example code for ``<input>`` and ``<reply>`` tags.
+   - Codified ``<noreply>`` as a canonical, reserved tag that RiveScript
+     interpreters will not handle as anything other than literal text.
 
    Rev 13 - Feb 11, 2015
    - Add information about the `! local concat` parser option that lets you
